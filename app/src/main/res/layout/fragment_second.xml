@@ -286,4 +286,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <CheckBox
+        android:id="@+id/remeberMeCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="281dp"
+        android:text="Remember Me"
+        android:textColor="@color/colorPrimary"
+        android:buttonTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hobbies_card" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

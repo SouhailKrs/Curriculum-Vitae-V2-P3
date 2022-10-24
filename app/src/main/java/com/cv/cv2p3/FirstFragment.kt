@@ -60,12 +60,22 @@ class FirstFragment : Fragment() {
 
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentFirstBinding.inflate(inflater, container, false)
         appPreferences =
             requireActivity().getSharedPreferences("local_shared_pref", Context.MODE_PRIVATE)
+        val sData = appPreferences.getString("secondData", null)
+        val data = gson.fromJson(sData, SecondData::class.java)
+        if(data!=null && data.isChecked){
+
+            findNavController().navigate(R.id.action_firstFragment_to_lastFragment)
+
+
+        }
+
         return binding.root
     }
 }

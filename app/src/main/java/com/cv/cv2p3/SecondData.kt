@@ -12,4 +12,5 @@ data class SecondData(
     @SerializedName("isMusic") val isMusic: Boolean,
     @SerializedName("isSports") val isSports: Boolean,
     @SerializedName("isGames") val isGames: Boolean,
+    @SerializedName("isChecked") val isChecked: Boolean = false,
 )

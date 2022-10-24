@@ -19,6 +19,7 @@ class HobbiesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val sData = appPreferences.getString("secondData", null)
         val data = gson.fromJson(sData, SecondData::class.java)
+        println(data.isChecked)
         binding.sportsCheckBox.isEnabled = false
         binding.musivCheckBox.isEnabled = false
         binding.gamesCheckBox.isEnabled = false

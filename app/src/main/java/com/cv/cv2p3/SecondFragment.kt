@@ -42,6 +42,7 @@ class SecondFragment : Fragment() {
                     hobbiesList.contains("Music"),
                     hobbiesList.contains("Sports"),
                     hobbiesList.contains("Games"),
+                    binding.remeberMeCB.isChecked
                 )
                 appPreferences.edit().putString("secondData", gson.toJson(dataRequest)).apply()
                 findNavController().navigate(R.id.action_secondFragment_to_lastFragment)
